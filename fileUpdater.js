@@ -2,7 +2,7 @@ const fs = require("fs")
 const path = require("path")
 
 function updateFile() {
-  let filename = path.join(__dirname, "test.js")
+  let filename = path.join(__dirname, "index.js")
   
   let num = Date.now()
   
