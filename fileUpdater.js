@@ -16,3 +16,4 @@ document.body.appendChild(p)
 }
 
 setInterval(updateFile, 1000*60*5) //Update every five minutes.
+updateFile()
