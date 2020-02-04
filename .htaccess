@@ -1,1 +1,4 @@
-
+#Cache for up to 2 hours, 100 days old on errors. 
+<FilesMatch "\.(js|css|html)$">
+Header set Cache-Control "max-age=7200, public, stale-if-error=8640000"
+</FilesMatch>
