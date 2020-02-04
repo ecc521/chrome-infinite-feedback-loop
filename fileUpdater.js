@@ -13,6 +13,7 @@ document.body.appendChild(p)
 `
   
   fs.writeFileSync(filename, code)
+  console.log("File updated to " + num)
 }
 
 setInterval(updateFile, 1000*60*5) //Update every five minutes.
