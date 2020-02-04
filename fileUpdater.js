@@ -3,11 +3,16 @@ const path = require("path")
 
 function updateFile() {
   let filename = path.join(__dirname, "test.js")
-  let num = Number(fs.readFileSync(filename, {encoding: "utf-8"}))
   
-  num += 1
+  let num = Date.now()
   
-  fs.writeFileSync(filename, num)
+  let code = `
+let p = document.createElement("p")
+p.innerHTML = "This is code file ${num}"
+document.body.appendChild(p)
+`
+  
+  fs.writeFileSync(filename, code)
 }
 
 setInterval(updateFile, 1000*60*5) //Update every five minutes.
