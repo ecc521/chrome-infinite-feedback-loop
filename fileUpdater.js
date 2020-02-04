@@ -8,7 +8,8 @@ function updateFile() {
   
   let code = `
 let p = document.createElement("p")
-p.innerHTML = "This is code file ${num}"
+let time = ${num}
+p.innerHTML = "This code file was generated at ${num}. That is " + Math.floor((Date.now()-time)/1000/60) + " minutes ago. "
 document.body.appendChild(p)
 `
   
